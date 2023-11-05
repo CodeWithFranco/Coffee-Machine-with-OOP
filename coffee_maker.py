@@ -13,8 +13,10 @@ class CoffeeMaker:
         print(f"Milk: {self.resources['milk']}ml")
         print(f"Coffee: {self.resources['coffee']}g")
 
-    def is_resource_sufficient(self, drink):
-        """Returns True when order can be made, False if ingredients are insufficient."""
+    def is_resource_sufficient(self, drink: object) -> object:
+        """Returns True when order can be made, False if ingredients are insufficient.
+        :rtype: object
+        """
         can_make = True
         for item in drink.ingredients:
             if drink.ingredients[item] > self.resources[item]:
